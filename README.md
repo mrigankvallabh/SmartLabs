@@ -1,2 +1,2 @@
 # SmartLabs
-# Smart Labs Website on Structural Vibration Monitoring
+Smart Labs Website on Structural Vibration Monitoring
