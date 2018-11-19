@@ -1,14 +1,6 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-}
-
-
+/* HOME PAGE */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -67,7 +59,13 @@ body {
   letter-spacing: -.05rem;
 }
 
-
+/* DASHBOARD */
+.badge-custom {
+  position: relative;
+  left: -0.75rem;
+  top: -0.5rem;
+  font-size: 0.6rem;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

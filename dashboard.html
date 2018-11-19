@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="User Admin Panel Smart Structural Labs at the Polytechnic University Hong Kong">
+    <meta name="author" content="Mrigank B Singh">
+    <title>USER - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Custom styles for this template-->
+    <link href="css/slab-admin.css" rel="stylesheet">
+  </head>
+  <body id="page-top">
+	<!-- Header Navbar -->
+	<header>
+    <nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand mr-1" href="dashboard.html">User Dashboard</a>
+      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown no-arrow mx-md-5">
+          <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-exclamation-triangle text-warning"></i>
+            <span class="badge badge-danger badge-pill">2</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+            <a class="dropdown-item" href="#">Alert1</a>
+            <a class="dropdown-item" href="#">Alert2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">View All Alerts</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown no-arrow mx-md-5">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle fa-fw"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">User Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+	</header>
+
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="sidebar navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="dashboard.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="projectsSubMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-tasks"></i>
+            <span>Projects</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="projectsSubMenu">
+            <a class="dropdown-item" href="projects.html">View Projects</a>
+            <a class="dropdown-item" href="project-add.html">Create Project</a>
+            <a class="dropdown-item" href="project-example.html">BTS</a>
+            <a class="dropdown-item" href="project-example.html">TM1</a>
+            <a class="dropdown-item" href="project-example.html">ZJZ</a>
+          </div>
+        </li>
+		    <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="usersSubMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Users</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="usersSubMenu">
+            <a class="dropdown-item" href="users.html">View Users</a>
+            <a class="dropdown-item" href="user-add.html">Create User</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Historical Data</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa=fw fa-key"></i>
+            <span>Change Password</span></a>
+        </li>
+      </ul>
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+          </ol>
+
+          <!-- Icon Cards-->
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-warning o-hidden h-100">
+                <div class="card-body">
+                  <div class="card-body-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                  </div>
+                  <div class="mr-5">26 Alerts!</div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="#">
+                  <span class="float-left">View Details</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Area Chart Example-->
+          <div class="row">
+            <div class="card col-md-6 mb-3">
+              <div class="card-header">
+                <i class="fas fa-chart-area"></i>
+                Area Chart Demo Only
+                <a href="#" class="float-right"> View detailed Chart</a>
+              </div>
+              <div class="card-body">
+                <canvas id="myAreaChart" width="100%" height="80"></canvas>
+              </div>
+              <div class="card-footer small text-muted">Last Alert raised at 10:53:29</div>
+            </div>
+            <div class="card col-md-6 mb-3">
+              <div class="card-header">
+                <i class="fas fa-chart-area"></i>
+                Area Chart Demo Only
+                <a href="#" class="float-right"> View detailed Chart</a>
+              </div>
+              <div class="card-body">
+                <canvas id="myAreaChart2" width="100%" height="80"></canvas>
+              </div>
+              <div class="card-footer small text-muted">Last Alert raised at 14:20:19</div>
+            </div>
+          </div>
+          <!-- Alerts Table -->
+          <div class="card mb-3">
+            <div class="card-header bg-warning">
+              <i class="fas fa-exclamation-triangle text-danger"></i>
+              All Alerts
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Project</th>
+                      <th>Time</th>
+                      <th>Value Recorded</th>
+                      <th>Value Threshold</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>ID</th>
+                      <th>Project</th>
+                      <th>Time</th>
+                      <th>Value Recorded</th>
+                      <th>Value Threshold</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>BTS</td>
+                      <td>11-09-2018 09:00:24</td>
+                      <td>500</td>
+                      <td>120</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>BTS</td>
+                      <td>11-09-2018 09:00:24</td>
+                      <td>500</td>
+                      <td>120</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>ZJZ</td>
+                      <td>11-09-2018 09:00:24</td>
+                      <td>500</td>
+                      <td>120</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>BTS</td>
+                      <td>11-09-2018 09:00:24</td>
+                      <td>500</td>
+                      <td>120</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright © Smart Structural Labs</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <!-- <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a> -->
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <script src="js/chart-area-demo.js"></script>
+    <!-- Datatables  -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/css/select.bootstrap.min.css"></script>
+    <script src="js/datatables-demo.js"></script>
+    <!-- Custom Javascripts -->
+    <script src="js/slab-admin.js"></script>
+  </body>
+</html>
