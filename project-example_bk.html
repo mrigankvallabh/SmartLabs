@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-
     <!-- Custom styles for this template-->
     <link href="css/slab-admin.css" rel="stylesheet">
   </head>
@@ -20,7 +18,7 @@
 	<!-- Header Navbar -->
 	<header>
     <nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand mr-1" href="index.html">User Dashboard</a>
+      <a class="navbar-brand mr-1" href="dashboard.html">User Dashboard</a>
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
       </button>
@@ -56,7 +54,7 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="dashboard.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
           </a>
@@ -69,9 +67,9 @@
           <div class="dropdown-menu" aria-labelledby="projectsSubMenu">
             <a class="dropdown-item" href="projects.html">View Projects</a>
             <a class="dropdown-item" href="project-add.html">Create Project</a>
-            <a class="dropdown-item" href="project-example.html">BTS</a>
-            <a class="dropdown-item" href="project-example.html">TM1</a>
-            <a class="dropdown-item" href="project-example.html">ZJZ</a>
+            <a class="dropdown-item" href="#">BTS</a>
+            <a class="dropdown-item" href="#">TM1</a>
+            <a class="dropdown-item" href="#">ZJZ</a>
           </div>
         </li>
 		    <li class="nav-item dropdown">
@@ -105,19 +103,23 @@
             <li class="breadcrumb-item">
               <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Charts Example</li>
+            <li class="breadcrumb-item active">BTS</li>
           </ol>
-          <!-- Charts Example -->
+
+          <!-- Area Chart Example-->
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-chart-area"></i>
-              Real Time Chart
+              Area Chart Demo Only
+              <a href="#" class="float-right"> View detailed Chart</a>
             </div>
             <div class="card-body">
-			  <div id="myHighChart" width="100%" height="80"></div>
+              <canvas id="myAreaChart" width="100%" height="80"></canvas>
             </div>
-            <div class="card-footer small text-muted">Please look at historical data</div>
+            <div class="card-footer small text-muted">Last Alert raised at 10:53:29</div>
           </div>
+         </div>
+        
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
@@ -163,16 +165,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <script src="js/chart-area-demo.js"></script>
     <!-- Datatables  -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <script src="datatables-demo.js"></script>
-    <!-- Highcharts -->
-	<script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://code.highcharts.com/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/modules/export-data.js"></script>
-	<!-- Custom Javascripts -->
+    <script src="https://cdn.datatables.net/select/1.2.7/css/select.bootstrap.min.css"></script>
+    <script src="js/datatables-demo.js"></script>
+    <!-- Custom Javascripts -->
     <script src="js/slab-admin.js"></script>
-	<script src="js/slab-chart.js"></script>
   </body>
 </html>
