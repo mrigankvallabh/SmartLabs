@@ -1,4 +1,3 @@
-
 $.getJSON(
   'https://mrigankvallabh.github.io/SmartLabs/sam.json',
   function (data) {
@@ -15,12 +14,19 @@ $.getJSON(
             'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
       },
       xAxis: {
-        type: 'datetime'
+        type: 'datetime',
+		dateTimeLabelFormats: {
+         day: '%H:%M'
+        },
+		title: {
+          text: 'Time'
+        }
       },
       yAxis: {
         title: {
-          text: 'Velocity (rms)'
-        }
+          text: 'RMS Velocity (\u03BCm/s)'
+        },
+		max: 400
       },
       legend: {
         enabled: true
